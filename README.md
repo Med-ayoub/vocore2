@@ -13,6 +13,7 @@ git clone https://github.com/Med-ayoub/vocore2.git
 ## configure
 
 ```sh
+cd path/to/openwrt
 ./package/vocore2/openwrt.1806/vocore2-setup.sh
 
 ```
