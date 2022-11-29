@@ -1,0 +1,11 @@
+diff --git a/include/prereq-build.mk b/include/prereq-build.mk
+index f7da916f64..52671a3227 100644
+--- a/include/prereq-build.mk
++++ b/include/prereq-build.mk
+@@ -160,5 +160,4 @@ prereq: $(STAGING_DIR_HOST)/bin/mkhash
+ 
+ # Install ldconfig stub
+ $(eval $(call TestHostCommand,ldconfig-stub,Failed to install stub, \
+-	touch $(STAGING_DIR_HOST)/bin/ldconfig && \
+-	chmod +x $(STAGING_DIR_HOST)/bin/ldconfig))
++	$(LN) /bin/true $(STAGING_DIR_HOST)/bin/ldconfig))
